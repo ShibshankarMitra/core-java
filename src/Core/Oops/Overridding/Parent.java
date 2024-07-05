@@ -1,30 +1,16 @@
 package Core.Oops.Overridding;
 
 public class Parent {
-
 	int a;
 	int b;
-	
-	
-	
-	
 	public Parent() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-
-
-
-
 	public Parent(int a, int b) {
 		super();//Its a child class of object. It calls Object class Constructors
 		this.a = a;
 		this.b = b;
 	}
-
-
-
-
 	public void m1() {
 		System.out.println("super class m1()");
 	}
@@ -36,9 +22,7 @@ public class Parent {
 	public static void stat1() {
 		System.out.println("super class static() 1");
 	}
-	
-	
-	
+
 	public void stat2() {
 		System.out.println("Super Class non-static() 4");
 	}

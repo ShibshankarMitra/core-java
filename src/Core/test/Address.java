@@ -1,8 +1,11 @@
-package Core.StreamAPI;
+package test;
 
 public class Address {
+
 	private int pincode;
 	private String city;
+	
+	
 	public int getPincode() {
 		return pincode;
 	}
@@ -27,4 +30,7 @@ public class Address {
 	public String toString() {
 		return "Address [pincode=" + pincode + ", city=" + city + "]";
 	}
+	
+	
+	
 }

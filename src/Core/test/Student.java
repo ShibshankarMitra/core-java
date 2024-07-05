@@ -1,4 +1,4 @@
-package Core.StreamAPI;
+package test;
 
 public class Student {
 
