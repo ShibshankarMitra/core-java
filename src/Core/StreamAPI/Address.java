@@ -1,11 +1,8 @@
 package Core.StreamAPI;
 
 public class Address {
-
 	private int pincode;
 	private String city;
-	
-	
 	public int getPincode() {
 		return pincode;
 	}
@@ -25,13 +22,9 @@ public class Address {
 	}
 	public Address() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return "Address [pincode=" + pincode + ", city=" + city + "]";
 	}
-	
-	
-	
 }

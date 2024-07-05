@@ -5,21 +5,17 @@ import java.util.concurrent.Callable;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 //
 //		MyFunctionalInterfaceImpl impl= new MyFunctionalInterfaceImpl();
 //		impl.showName();
-	
-		
-		
+
 		//Anonymous class
 		//this class doesnot have a name only implementation is present
 		MyFunctionaInterface i2 = new MyFunctionaInterface() {
 			
 			@Override
 			public void showName() {
-				// TODO Auto-generated method stub
-				
 			}
 		};
 		i2.showName();
@@ -29,10 +25,7 @@ public class Main {
 			//implementation
 			System.out.println("Using lambda");
 		};
-		
 		i1.showName();
-		
-		
 		
 		//Using lambda to implement Runnable to create Thread
 		
@@ -43,12 +36,9 @@ public class Main {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 		};
-		
 		
 		Runnable thread2= ()->{
 			//implementation of thread
@@ -57,10 +47,8 @@ public class Main {
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
 		};
 		
 		Thread t1 = new Thread(thread1);

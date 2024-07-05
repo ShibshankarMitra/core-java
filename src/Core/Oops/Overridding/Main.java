@@ -7,15 +7,10 @@ import java.util.stream.Collectors;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		                                /* Overriding EXAMPLE */
 		
 		//creating child class object
 		//Child class object can be created in two ways
-		
-		
-		
 		                                          //1---->
 		
 		//Superclass reference, Subclass constructor/Object

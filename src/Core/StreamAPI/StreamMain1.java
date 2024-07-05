@@ -18,23 +18,14 @@ public class StreamMain1 {
 
 	@SuppressWarnings("null")
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		
-		
-		
 		//create a list and filter all even numbers from List
 		List<Integer> list1 = List.of(1,2,3,25,56,289,58,58,2,3,2,1,2,25,25,25);
-		
-		
 		List<Integer> list2= new ArrayList<Integer>();
 		list2.add(21);
 		list2.add(28);
 		list2.add(200);
 		list2.add(345);
 		list2.add(59);
-		
-		
 
 ///		//Q. Using stream API filtering even numbers?
 		
@@ -72,11 +63,7 @@ public class StreamMain1 {
 //		String class1 = list1.stream().collect(Collectors.groupingBy(i->i,Collectors.counting())).toString();
 //		System.out.println(class1);
 //		
-//		
-		
-		
-		
-		
+//
 		
 		//Creating Students and Address
 
@@ -121,9 +108,7 @@ public class StreamMain1 {
 		
 		Optional<Student> max = students.stream().max(Comparator.comparing(Student::getId));
 		System.out.println(max);
-		
-		
-		
+
 //		// Q1> .get the List of Students and counts Grouping by Address.City
 		
 //		List<Student> students = List.of(s1,s2,s3,s4);
@@ -172,22 +157,16 @@ public class StreamMain1 {
 //		Map<Integer, List<Integer>> collect3 = Arrays.stream(intarray).boxed().filter(i->i%2==0).collect(Collectors.groupingBy(i->i));
 //		collect3.entrySet().forEach(e-> System.out.println(e.getKey()));
 //		
-//		
-		                
-		
-		
+//
 		//Q4> Program to get the square root of integers in Arraylist/Array
-		
 		int arr[]= {1,2,3,4,5};
-		
 		//Arrays.asList(arr).stream() OR 
 	
 		List<Double> collect = Arrays.stream(arr).boxed().map(Math::sqrt).collect(Collectors.toList());
 		System.out.println(collect);
-              
-		
+
 		//Q4> Program to get the duplicate characters in a String
-		
+
 		String str= new String("I am happy to get the details from portal");
 		
 		str.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(c->c,Collectors.counting()))
@@ -232,12 +211,7 @@ public class StreamMain1 {
 		 
 		 //Q.> MAximun nuber of occurance
 		 Map<Integer, Long> map =Arrays.stream(array).boxed().collect(Collectors.groupingBy(i->i,Collectors.counting()));
-		 
-		 
 			Optional<Integer> value= Arrays.stream(arr1).boxed().min((i,j)->i.compareTo(j));
 			System.out.println(value.get());
 			}
-
-	
-	
 }
