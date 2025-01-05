@@ -29,25 +29,25 @@ public class Main {
 		
 		//Using lambda to implement Runnable to create Thread
 		
-		Runnable thread1= ()->{
-			//implementation of thread
-			for(int i = 10; i>=1; i--) 
-			System.out.println("Inside Thread 1");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+		Runnable thread1= ()-> {
+			for (int i = 10; i >= 1; i--){
+				try {
+					System.out.println("Inside Thread 1");
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+		}
 		};
 		
 		Runnable thread2= ()->{
-			//implementation of thread
-			for(int i = 10; i>=1; i--) 
-			System.out.println("Inside Thread 2");
-			try {
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			for (int i = 10; i >= 1; i--){
+				try {
+					System.out.println("Inside Thread 2");
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 		};
 		

@@ -7,25 +7,23 @@ public class Main2 {
         try 
         {
             badMethod();  
-            System.out.print("A");  
+            System.out.println("try");
         } 
       
-        catch (Exception ex)  //Since Exception is the superClass of all 
-        //it will handle Runtime Exception
+        catch (RuntimeException ex)  //Since RuntimeException is the most immediate superClass of Arithmatic Exception will be executed
         { 
-            System.out.print("C"); 
+            System.out.println("Runtime Exception catch");
         }    
         
-//        catch (ArithmeticException ex1)
-//        { 
-//            System.out.print("B"); 
-//        } 
-        
+        catch (Exception ex1)
+        {
+            System.out.println("Exception catch");
+        }
+
         finally 
         {
-            System.out.print("D"); 
-        } 
-        System.out.print("E"); 
+            System.out.println("Finally block");
+        }
     } 
     public static void badMethod() 
     { 
