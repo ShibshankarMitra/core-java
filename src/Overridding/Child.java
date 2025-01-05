@@ -43,10 +43,10 @@ public class Child extends Parent {
 	
 	
 	//If we make only the method return type Different lets say int, there would be ambiguity.
-//	public int m1() {
-//		System.out.println("sub class int m1()");
-//		return 0;
-//	}
+	public int m1() {
+		System.out.println("sub class int m1()");
+		return 0;
+	}
 	
 	//You can overLoad m1() by changing the parameters
 	public void m1(int intgr) {
@@ -67,7 +67,7 @@ public class Child extends Parent {
 	
 	//But you can have another m1() with different parameters and different return type
 	//But that is not called overloading, If the return type is same then only It will be called as Overloading
-	public int m1(int intgr,String str) {
+	public int m1(int intgr, String s) {
 		System.out.println("sub class m1()");
 		return intgr;
 	}
@@ -86,7 +86,7 @@ public class Child extends Parent {
 	
 	
 	
-	//public static void stat2() { System.out.println("Sub class static() 2"); }
+	public static void stat2() { System.out.println("Sub class static() 2"); }
 	
 	//stat2() is already declared as non-static instance method in Parent
 	//This static method cannot hide the instance method from Parent
@@ -97,7 +97,7 @@ public class Child extends Parent {
 	 
 	
 	
-	//public void stat3() { System.out.println("Sub class Non-static() 3"); }
+	public void stat3() { System.out.println("Sub class Non-static() 3"); }
 	
 	//stat3() is already declared in Parent as static
 	//This instance method cannot override the static method from Parent
