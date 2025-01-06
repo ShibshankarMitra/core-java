@@ -10,7 +10,6 @@ public class Test {
 		List<Integer> list= List.of(1, 12, 5, 34, 234, 12, 3, 4, 1, 100, 5, 2, 7);
 		System.out.println("Before sorting");
 		System.out.println(list);
-		ArrayList
 
 		List<Integer> list1 = list.stream().sorted(Comparator.naturalOrder()).toList();
 		System.out.println("After sorting");
