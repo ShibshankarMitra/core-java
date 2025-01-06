@@ -29,49 +29,49 @@ public class StreamMain1 {
 
 ///		//Q. Using stream API filtering even numbers?
 		
-//		Stream<Integer> stream = list1.stream();
-//		List<Integer> collectedList = stream.filter(i->i%2==0).collect(Collectors.toList());
-//		System.out.println(collectedList);
-//		
-//		//Q. Using stream API filtering numbers greater than 50
+		Stream<Integer> stream = list1.stream();
+		List<Integer> collectedList = stream.filter(i->i%2==0).collect(Collectors.toList());
+		System.out.println(collectedList);
+
+		//Q. Using stream API filtering numbers greater than 50
 		
-//		List<Integer> collectedList2 = list2.stream().filter(i->i>=50).collect(Collectors.toList());
-//		System.out.println(collectedList2);
-//		
-//		
-//		//Q. Map method to print the squares
+		List<Integer> collectedList2 = list2.stream().filter(i->i>=50).collect(Collectors.toList());
+		System.out.println(collectedList2);
+
+
+		//Q. Map method to print the squares
 		
-//		List<Integer> square = list1.stream().map(i->i+100).collect(Collectors.toList());
-//		System.out.println(square);
-//		
-//		
-//		//Q ForEach method to print and execute a method
+		List<Integer> square = list1.stream().map(i->i+100).collect(Collectors.toList());
+		System.out.println(square);
+
+
+		//Q ForEach method to print and execute a method
 		
-//		list1.stream().forEach(i->{
-//			System.out.println(i);
-//		});
-//		
-//		
-//		//Min method to compare and get a minimum passing comparator as Lambda
+		list1.stream().forEach(i->{
+			System.out.println(i);
+		});
+
+
+		//Min method to compare and get a minimum passing comparator as Lambda
 		
-//		Optional<Integer> min = list1.stream().min((x,y)->x.compareTo(y));
-//		System.out.println(min.get());
-//		
-//		
-//	
-//		System.out.println("printing Collection");
-//		String class1 = list1.stream().collect(Collectors.groupingBy(i->i,Collectors.counting())).toString();
-//		System.out.println(class1);
-//		
-//
+		Optional<Integer> min = list1.stream().min((x,y)->x.compareTo(y));
+		System.out.println(min.get());
+
+
+
+		System.out.println("printing Collection");
+		String class1 = list1.stream().collect(Collectors.groupingBy(i->i,Collectors.counting())).toString();
+		System.out.println(class1);
+
+
 		
 		//Creating Students and Address
 
 		Address  addr1 = new Address(700136,"Kolkata");
 		Address  addr2 = new Address(600135,"Delhi");
 		Address  addr3 = new Address(509823,"Hyderabad");
-		Address  addr4 = new Address(200034,"Kolkata");
-		Address  addr5 = new Address(456723,"Kolkata");
+		Address  addr4 = new Address(200034,"Bangalore");
+		Address  addr5 = new Address(456723,"Jammu");
 		
 		
 		Student s1 = new Student();
@@ -81,7 +81,7 @@ public class StreamMain1 {
 		
 		
 		Student s2 = new Student();
-		s2.setId(2);
+		s2.setId(3);
 		s2.setName("Sharmila");
 		s2.setAddress(addr2);
 		
@@ -98,11 +98,11 @@ public class StreamMain1 {
 		List<Student> students = List.of(s1,s2,s3,s4);
 		List<Student> collect7 = students.stream().filter(s->s.getId()>2 && s.getName().startsWith("S")).collect(Collectors.toList());
 		System.out.println(collect7);
-		
-		
-		List<Student> collect5 = students.stream().sorted(Comparator.comparing(Student::getId).thenComparing(Comparator.comparing(Student::getName)))
-		.collect(Collectors.toList());
-		
+
+
+		List<Student> list3 = students.stream().sorted(Comparator.comparing(Student::getId)).toList();
+		System.out.println(list3);
+
 		Map<Integer, String> collect6 = students.stream().collect(Collectors.toMap(Student::getId, Student::getName));
 		System.out.println(collect6);
 		

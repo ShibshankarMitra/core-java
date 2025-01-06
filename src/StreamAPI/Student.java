@@ -1,6 +1,6 @@
 package StreamAPI;
 
-public class Student {
+public class Student implements Comparable<Student>{
 
 	private int id;
 	private String name;
@@ -36,9 +36,10 @@ public class Student {
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
-	
-	
-	
-	
-	
+
+
+	@Override
+	public int compareTo(Student o) {
+        return Integer.compare(this.address.getPincode(), o.getAddress().getPincode());
+	}
 }

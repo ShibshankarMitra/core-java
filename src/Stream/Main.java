@@ -17,7 +17,9 @@ public class Main {
 		System.out.println(collect);
 		
 		List<Integer> integers = List.of(1,2,11,14,56,123);
+		Optional<Integer> max1 = integers.stream().max(Comparator.naturalOrder());
 		Optional<Integer> max = integers.stream().max(Comparator.comparing(Integer::intValue));
+		System.out.println(max1.get());
 		System.out.println(max.get());
 		
 		str.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(c->c,Collectors.counting())).entrySet().stream().filter(e->e.getValue()>1)

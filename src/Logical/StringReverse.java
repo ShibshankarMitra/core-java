@@ -11,7 +11,7 @@ public class StringReverse {
 		int num = 131;
 		String str= String.valueOf(num);
 		String reversed = str.chars().mapToObj(c -> (char) c)
-				.reduce("", (s, c) -> c + s, (s1, s2) -> s2 + s1);
+				.reduce("", (s, c) -> c + s, String::concat);
 		int reversedNum= Integer.parseInt(reversed);
 		if(reversedNum==num){
 			System.out.println("Palindrome: "+num);
