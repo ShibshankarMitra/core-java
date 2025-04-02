@@ -13,7 +13,7 @@ public class Main {
             //Throws compile time Error
             String str= null;
             
-            System.out.println(str.equals(""));
+            //System.out.println(str.equals(""));
             int result=0/0;
             
             //System.out.println(result);
