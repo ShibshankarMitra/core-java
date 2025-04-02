@@ -81,7 +81,7 @@ public class Main {
 		
 		System.out.println(li.next());//li moves to the next Index that is 0. And prints 0th index element.
 		System.out.println(li.next());//li moves to next index that is 1. And prints 1st index element
-		li.set("Harami");//li currently at index 1, so it updates the element at index 1
+		li.set("Harini");//li currently at index 1, so it updates the element at index 1
 		
 		System.out.println("Current index = "+ li.previousIndex());//li currently at index 1, so it prints CurrentIndex 1
 		System.out.println(li.nextIndex());//li currently at index 1, so it prints 2
