@@ -35,15 +35,10 @@ public class Main {
 		list.add("Anal");
 		list.add("Pronoy");
 		list.add("Jyotirmoy");
-	
-		
-		
-		
-		
-		Set<String> set= new HashSet<String>();
-		set.addAll(list);
-		LinkedHashSet<String> lhs= new LinkedHashSet<>();
-		lhs.addAll(list);
+
+
+        Set<String> set = new HashSet<String>(list);
+        LinkedHashSet<String> lhs = new LinkedHashSet<>(list);
 		
 		System.out.println(list);
 		//Provides us with Add(), and remove() for CRUD operations
