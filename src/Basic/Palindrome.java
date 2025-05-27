@@ -4,12 +4,15 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Palindrome {
 
     public static void main(String[] args) {
-        String str= "DADA";
+        String str= "AD " +
+                "IDAS";
         System.out.println(isPalindrome(str));
+        getDistinctChar(str);
         List<Integer> integers= List.of(1,2, 13,34,2,5,8);
         Integer reduce = integers.stream().reduce(0, Integer::sum);
         System.out.println(reduce);
@@ -34,6 +37,12 @@ public class Palindrome {
         boolean result= false;
         String reduce = s.chars().mapToObj(c -> (char) c).reduce("", (c1, c2) -> c2 + c1, String::concat);
         return reduce.equals(s);
+    }
+
+    private static void getDistinctChar(String s){
+        Map<Character, Long> collect = s.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+        System.out.println(collect);
+
     }
 }
 
