@@ -10,7 +10,7 @@ public class Palindrome {
 
     public static void main(String[] args) {
         String str= "AD " +
-                "IDAS";
+                " IDAS";
         System.out.println(isPalindrome(str));
         getDistinctChar(str);
         List<Integer> integers= List.of(1,2, 13,34,2,5,8);

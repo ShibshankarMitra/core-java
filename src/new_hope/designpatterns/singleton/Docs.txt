@@ -1,0 +1,16 @@
+Benefits of using Singleton objects:
+Simplified Access:
+Provides a single point of access for all consumers, making it easier to manage and control resources.
+Reduced Memory Consumption:
+Since only one instance exists, it can reduce memory usage compared to creating multiple instances.
+Data Integrity:
+Prevents multiple instances from causing conflicts and data inconsistencies.
+Centralized Control:
+Allows for a single point of control over the object's lifecycle and behavior.
+Drawbacks of using Singleton objects:
+Reduced Testability:
+Can make unit testing more difficult, as it's challenging to mock or isolate the Singleton instance.
+Increased Complexity:
+Can introduce unexpected complexities, especially in multi-threaded environments.
+Violation of Principles:
+Can violate principles like Open/Closed Principle if the Singleton class tightly couples consumers to a specific concrete implementation.

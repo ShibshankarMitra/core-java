@@ -1,4 +1,4 @@
-package Overridding;
+package new_hope.inheritance.Overridding;
 
 public class Parent {
 	int a;

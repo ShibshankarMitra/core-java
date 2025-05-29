@@ -29,14 +29,9 @@ public class  Main {
 		e2.setName("Shankar");
 		e2.setSalary(35000);
 		e2.setAddress(a2);
-
 		Employee e3 = new Employee(1003, "Raja", 30000, a3);
 		Employee e4 = new Employee(1004, "Pronoy", 28000, a4);
 		Employee e5 = new Employee(1005, "Aanal", 28000, a5);
-
-
-		//System.out.println(e1.compareTo(e2));
-
 		List<Employee> list = new ArrayList<>();
 		list.add(e1);
 		list.add(e2);
@@ -44,9 +39,7 @@ public class  Main {
 		list.add(e4);
 		list.add(e5);
 
-		List<Employee> list2 = new ArrayList<>(list);
-
-		System.out.println("Unsorted List: ");
+        System.out.println("Unsorted List: ");
 		list.forEach(System.out::println);
 
 		System.out.println("Natural sorted List: ");
@@ -56,8 +49,6 @@ public class  Main {
 		list.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);
 
 		System.out.println("Custom sorted List based on Salary then on the address country: ");
-		list.stream().sorted(Comparator.comparing(Employee::getSalary).thenComparing(e->e.getAddress().getPin())).forEach(System.out::println);
-
-
+		list.stream().sorted(Comparator.comparing(Employee::getSalary).thenComparing(e->e.getAddress().getCountry())).forEach(System.out::println);
 	}
 }

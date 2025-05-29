@@ -1,0 +1,10 @@
+Q. Why do we need an immutable object?
+
+1. thread safety
+2. cache and performance
+3. maintainability and debugging
+
+Q. How to override the equals() and hashcode() methods for immutable objects
+
+Equals should return true if all the mutable and immutable fields are equal
+hashcode() should return same int if the fields are equal for both

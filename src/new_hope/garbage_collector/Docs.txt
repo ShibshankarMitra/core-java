@@ -1,0 +1,39 @@
+1. Mark and Sweep Algorithm:
+This is the basic algorithm where the garbage collector first marks all reachable objects and then sweeps through the heap to reclaim the memory used by unmarked (unreachable) objects.
+It's a simple algorithm but can lead to memory fragmentation.
+2. Generational Garbage Collection:
+This approach divides the heap into generations (Young, Old/Tenured) based on object age.
+Most new objects are allocated in the Young Generation.
+Minor GC occurs frequently in the Young Generation while Major GC occurs less frequently in the Old Generation.
+3. Serial GC:
+A single-threaded garbage collector that performs garbage collection using only one thread.
+It's suitable for small applications or single-threaded environments.
+It uses a "stop-the-world" approach, pausing the application threads during garbage collection.
+4. Parallel GC:
+Also known as the "Throughput Collector."
+It uses multiple threads to perform garbage collection in parallel, reducing the impact of GC pauses and improving throughput.
+It is suitable for multi-core systems.
+5. CMS (Concurrent Mark Sweep) GC:
+It aims to minimize pause times by doing most of the garbage collection concurrently with the application threads.
+It's suitable for applications that need low latency.
+It can lead to memory fragmentation and is considered mostly deprecated.
+6. G1 (Garbage-First) GC:
+Divides the heap into regions instead of having separate generations.
+It tries to balance throughput and latency.
+G1 is the default collector since Java 9.
+7. ZGC (Z Garbage Collector):
+A low-latency collector designed for large heaps and minimal pause times.
+It performs most of its work concurrently.
+It is suitable for applications with large memory requirements and strict latency needs.
+8. Shenandoah GC:
+Another low-latency collector similar to ZGC, aiming to minimize pause times by compacting the heap concurrently.
+It is designed for applications with large heaps and minimal pause time requirements.
+9. Epsilon GC:
+A "no-op" collector that does not reclaim memory.
+It is used for performance testing purposes and measuring memory usage without garbage collection.
+Key Concepts:
+Pause Time: The time during which the application is paused for garbage collection.
+Throughput: The amount of work an application can do over time.
+Fragmentation: Memory being divided into small, unusable blocks after garbage collection.
+Heap: The area of memory where objects are stored.
+Generations: Divisions of the heap based on object age.
