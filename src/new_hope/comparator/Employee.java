@@ -1,4 +1,4 @@
-package Comparable;
+package new_hope.comparator;
 
 
 //Natural comparison implemented by comparable

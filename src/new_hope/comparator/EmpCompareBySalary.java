@@ -1,9 +1,9 @@
-package Comparable;
+package new_hope.comparator;
 
 import java.util.Comparator;
 
 
-//Custom comparator class
+//Custom new_hope.comparator class
 public class EmpCompareBySalary implements Comparator<Employee> {
 
 	@Override

@@ -1,4 +1,4 @@
-package Comparable;
+package new_hope.comparator;
 
 import java.util.Comparator;
 import java.util.List;
