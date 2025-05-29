@@ -1,0 +1,18 @@
+In programming, particularly in languages like Java, exceptions are categorized as either checked or unchecked.
+Checked exceptions are those that the compiler forces the programmer to handle explicitly, either by using a try-catch block or by declaring the method to throw the exception.
+Unchecked exceptions, on the other hand, are not checked at compile time and do not require explicit handling.
+They are typically runtime exceptions, indicating errors within the program's logic.
+Key Differences:
+Compile-time vs. Runtime:
+Checked exceptions are checked at compile time, while unchecked exceptions are checked at runtime.
+Mandatory Handling:
+Checked exceptions require explicit handling (try-catch or throws declaration), whereas unchecked exceptions do not.
+Nature of Errors:
+Checked exceptions often represent errors related to external factors or API usage that the programmer can reasonably expect and handle, whereas unchecked exceptions typically indicate programming errors or logical flaws within the code itself.
+Elaboration:
+Checked Exceptions:
+These exceptions, like IOException, SQLException, or ClassNotFoundException, often represent situations where the program might encounter issues during normal execution, such as file I/O problems or database connectivity issues.
+The compiler ensures that the programmer handles these potential exceptions by either using a try-catch block to handle them or by declaring the method to throw the exception.
+Unchecked Exceptions:
+Unchecked exceptions, such as NullPointerException, ArithmeticException, or ArrayIndexOutOfBoundsException, typically indicate errors within the program's logic, such as attempting to access a null object or dividing by zero.
+The compiler does not force explicit handling, as these errors are often considered programming errors that can be avoided through careful coding.
