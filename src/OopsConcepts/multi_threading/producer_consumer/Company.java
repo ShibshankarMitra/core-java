@@ -1,4 +1,4 @@
-package MultiThreading.ProducerConsumer;
+package OopsConcepts.multi_threading.producer_consumer;
 
 class Company
 {
