@@ -22,6 +22,8 @@ public class Parent {
 	public void m4() {
 		System.out.println("super class m4()");
 	}
+
+	protected void m5(){System.out.println("super class m5()");}
 	
 	public static void stat1() {
 		System.out.println("super class static() 1");

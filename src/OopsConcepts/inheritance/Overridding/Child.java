@@ -3,7 +3,7 @@ package OopsConcepts.inheritance.Overridding;
 public class Child extends Parent {
 
 	int c;
-	
+
 
 	//It can have 3 Constructors------>
 	//Superclass Default(----> calls super() default superclass constructor internally)
@@ -16,7 +16,7 @@ public class Child extends Parent {
 
 	public Child(int a, int b, int c) {
 		super(a, b);//Calls the parent class constructors first// internally calling superclass parameterized constructors
-		this.c= c;//then sets c in this reference to the current object
+		this.c = c;//then sets c in this reference to the current object
 	}
 
 	public Child(int c) {
@@ -29,7 +29,7 @@ public class Child extends Parent {
 	public void m1() {
 		System.out.println("sub class m1()");
 	}
-	
+
 	//If we make only the method return type Different lets say int, there would be ambiguity.
 //	public int m1() {
 //		System.out.println("sub class int m1()");
@@ -37,7 +37,7 @@ public class Child extends Parent {
 //	}
 
 	//You can overLoad m1() by changing the parameters
-	public void m1(int intgr) {
+	public void m1(int integer) {
 		System.out.println("sub class m1(int)");
 	}
 
@@ -72,11 +72,16 @@ public class Child extends Parent {
 	//public static void stat2() { System.out.println("Sub class static() 2"); }
 
 	//public void stat3() { System.out.println("Sub class Non-static() 3"); }
-	
+
 	//stat3() is already declared in Parent as static
 	//This instance method cannot override the static method from Parent
 	//Can be declared as Static though
 
 	//private void m4(){
-		//parent class public methods can not be assigned a weaker access modifier in child class
+	//parent class public methods can not be assigned a weaker access modifier in child class }
+
+	public void m5(){
+		System.out.println("child class m5");
+		//parent class private methods can be assigned a stronger access modifier in child class
+	}
 	}
