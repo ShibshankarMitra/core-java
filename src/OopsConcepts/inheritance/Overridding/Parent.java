@@ -18,6 +18,10 @@ public class Parent {
 	public void m2() {
 		System.out.println("super class m2()");
 	}
+
+	public void m4() {
+		System.out.println("super class m4()");
+	}
 	
 	public static void stat1() {
 		System.out.println("super class static() 1");

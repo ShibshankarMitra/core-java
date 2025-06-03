@@ -76,7 +76,7 @@ public class Child extends Parent {
 	//stat3() is already declared in Parent as static
 	//This instance method cannot override the static method from Parent
 	//Can be declared as Static though
-	
-	
-	
-}
+
+	//private void m4(){
+		//parent class public methods can not be assigned a weaker access modifier in child class
+	}

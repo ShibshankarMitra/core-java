@@ -1,0 +1,3 @@
+The Object class is the root of the class hierarchy in Java, meaning that every class directly or indirectly inherits from it.
+However, you cannot directly use super to reference the Object class in a class that directly extends Object because Object is the superclass of all classes and does not have a superclass itself.
+In summary, the super keyword is used to access members of the immediate parent class in the inheritance hierarchy, but it cannot be used to refer to the Object class when a class extends it directly.

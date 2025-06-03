@@ -1,0 +1,9 @@
+A functional interface in Java can extend another interface, but only under specific conditions.
+It can extend an interface if the extended interface doesn't have any abstract methods of its own,
+or if the extended interface's abstract method has the same signature as the functional interface's abstract method.
+
+Can Super, this keyword be used from static context?
+No, Statics belong to class, not the superclass, so the context of this or super.
+
+Can static block throw exception?
+Yes it can but must be declared or handled in the class level.
