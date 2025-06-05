@@ -3,33 +3,33 @@ package dsa_algorithms.slidingwindow;
 import java.util.*;
 
 class LongestNonRepeatingSubstring {
-    //impl function here
 
     public Map.Entry<Integer, String> findLongestUniqueSubstring(String str){
-        List<String> window= new ArrayList<>();
-        List<String> charList = str.chars().mapToObj(c -> (char) c).map(Object::toString).toList();
-        Map<String, Integer> subStringMap= new LinkedHashMap<>();
-        for (String s : charList) {
-            if (!window.contains(s)) {
-                window.add(s);
-            } else {
-                int repeatedIndex = window.indexOf(s);
-                window.subList(0, repeatedIndex + 1).clear();
-                window.add(s);
+        Set<Character> existing= new HashSet<>();
+        int left=0;
+        int right=0;
+        int maxSize=0;
+        while(right<str.length()){
+            if(!existing.contains(str.charAt(right))){
+                existing.add(str.charAt(right));
+                if((right-left+1)>maxSize){
+                    maxSize=right-left+1;
+                    System.out.println(str.substring(left,right+1));
+                }
+                right++;
             }
-            String concat = window.stream().reduce("", (a, b) -> a + b);
-            subStringMap.put(concat, concat.length());
+            else{
+                existing.remove(str.charAt(left));
+                left++;
+            }
         }
-        subStringMap.entrySet().stream().max(Map.Entry.comparingByValue()).ifPresent(e -> System.out.println(e.getKey()));
         return null;
     }
 
 
     public static void main(String[] args) {
         LongestNonRepeatingSubstring finder = new LongestNonRepeatingSubstring();
-        Map.Entry<Integer, String> result = finder.findLongestUniqueSubstring("abcabcbb");
-        int i = 'c' - 'b';
-        System.out.println(i);
+        Map.Entry<Integer, String> result = finder.findLongestUniqueSubstring("abcdabcbb");
         System.out.println("Longest substring without repeating characters: "); // Expected output: (3, "abc")
     }
 }
