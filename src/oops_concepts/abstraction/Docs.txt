@@ -6,4 +6,5 @@ Can Super, this keyword be used from static context?
 No, Statics belong to class, not the superclass, so the context of this or super.
 
 Can static block throw exception?
+You can not throw a checked exception from a static block.
 Yes it can but must be declared or handled in the class level.
