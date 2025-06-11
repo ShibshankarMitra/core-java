@@ -48,6 +48,11 @@ public class Main {
 		 * Runtime polymorphism or Overriding is not Allowed
 		 * Both the static methods with same name will belong to the respective Separate classes
 		 */
+
+		//parent.m10();
+		/*
+		 * Compile time error, m10() is private method of Parent class
+		 */
 		                                          //2---->
 		 
 		//Subclass reference, Subclass constructor
@@ -74,6 +79,8 @@ public class Main {
 		 * Here c1 is child class object, and also gets references from Child class
 		 * child class method m3() is present in Child class and can be referenced.
 		 */
+
+
 	}
 
 }

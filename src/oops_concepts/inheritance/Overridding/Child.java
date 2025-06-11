@@ -80,6 +80,15 @@ public class Child extends Parent {
 	//private void m4(){
 	//parent class public methods can not be assigned a weaker access modifier in child class }
 
+	//parent class private methods can be assigned a stronger access modifier in child class
+	//however it can not be overridden
+	public void m10() {
+		System.out.println("child class m10");
+
+	}
+
+	//parent class protected methods can be assigned a stronger access modifier in child class
+	//Also it can be overridden
 	public void m5(){
 		System.out.println("child class m5");
 		//parent class private methods can be assigned a stronger access modifier in child class

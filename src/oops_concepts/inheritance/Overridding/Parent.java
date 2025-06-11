@@ -36,6 +36,7 @@ public class Parent {
 	public static void stat3() {
 		System.out.println("Super Class Static() 4");
 	}
-	
+
+	private void m10() {}
 	
 }
