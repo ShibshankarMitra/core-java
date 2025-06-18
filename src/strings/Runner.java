@@ -1,9 +1,8 @@
-package tests;
+package strings;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
+import java.util.*;
 
-public class Main {
+public class Runner {
     public static void main(String[] args) {
         removeAlternateChars();
         printDeque();
@@ -11,6 +10,7 @@ public class Main {
         System.out.println(gcd(24, 36));
         System.out.println(lcm(24, 36));
         System.out.println(ifAnagram("listen", "silent"));
+        minMaxWordsInSentence();
     }
 
     public static void removeAlternateChars() {
@@ -80,4 +80,13 @@ public class Main {
         return false;
     }
 
+    public static void minMaxWordsInSentence(){
+        String sentence = "What is the most popular word in the world?";
+        String newSentence = sentence.replaceAll("\\.", "").replaceAll(",", "");
+        List<String> words = Arrays.asList(newSentence.split(" ")).stream().toList();
+        String max= words.stream().max(Comparator.comparingInt(String::length)).orElse(null);
+        String min = words.stream().min(Comparator.comparingInt(String::length)).orElse(null);
+        System.out.println("Longest word: " + max);
+        System.out.println("Shortest word: " + min);
+    }
 }
