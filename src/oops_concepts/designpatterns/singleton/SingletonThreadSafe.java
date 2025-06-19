@@ -4,10 +4,9 @@ public class SingletonThreadSafe {
     private static SingletonThreadSafe instance;
 
     private SingletonThreadSafe(){
-
     }
 
-    public synchronized SingletonThreadSafe getInstance(){
+    public static SingletonThreadSafe getInstance(){
         if(instance == null){
             synchronized (SingletonThreadSafe.class){
                 if(instance == null){
