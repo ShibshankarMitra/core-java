@@ -1,4 +1,4 @@
-package designpatterns.singleton;
+package design_patterns.singleton;
 
 public class SingletonThreadSafe {
     private static SingletonThreadSafe instance;

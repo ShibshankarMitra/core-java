@@ -1,4 +1,4 @@
-package designpatterns.singleton;
+package design_patterns.singleton;
 
 public class SingletonEager {
     //thread safe in nature but takes more load time

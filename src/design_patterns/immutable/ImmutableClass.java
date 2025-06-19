@@ -1,7 +1,10 @@
-package designpatterns.immutable;
+package design_patterns.immutable;
+
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public final class ImmutableClass {
     //immutable members with parameterized constructor and public getters, but no setters

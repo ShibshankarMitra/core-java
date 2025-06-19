@@ -1,4 +1,4 @@
-package designpatterns.immutable;
+package design_patterns.immutable;
 
 import java.util.ArrayList;
 import java.util.List;
