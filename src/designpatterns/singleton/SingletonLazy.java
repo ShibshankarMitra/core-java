@@ -1,4 +1,4 @@
-package oops_concepts.designpatterns.singleton;
+package designpatterns.singleton;
 
 public class SingletonLazy {
     private static SingletonLazy instance;

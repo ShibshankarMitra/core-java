@@ -1,4 +1,4 @@
-package oops_concepts.designpatterns.immutable;
+package designpatterns.immutable;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package oops_concepts.designpatterns.singleton;
+package designpatterns.singleton;
 
 public class SingletonEager {
     //thread safe in nature but takes more load time
