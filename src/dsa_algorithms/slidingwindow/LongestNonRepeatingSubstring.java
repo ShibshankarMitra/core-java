@@ -6,23 +6,28 @@ class LongestNonRepeatingSubstring {
 
     public Map.Entry<Integer, String> findLongestUniqueSubstring(String str){
         Set<Character> existing= new HashSet<>();
+        List<String> substrings = new ArrayList<>();
         int left=0;
         int right=0;
         int maxSize=0;
         while(right<str.length()){
-            if(!existing.contains(str.charAt(right))){
-                existing.add(str.charAt(right));
-                if((right-left+1)>maxSize){
+            char currentChar = str.charAt(right);
+            if(!existing.contains(currentChar)) {
+                existing.add(currentChar);
+                if(maxSize<right-left+1) {
+                    substrings.add(str.substring(left,right+1));
                     maxSize=right-left+1;
-                    System.out.println(str.substring(left,right+1));
                 }
                 right++;
             }
-            else{
-                existing.remove(str.charAt(left));
-                left++;
+            else {
+                while(existing.contains(currentChar)) {
+                    existing.remove(str.charAt(left));
+                    left++;
+                }
             }
         }
+        System.out.println(substrings.getLast());
         return null;
     }
 

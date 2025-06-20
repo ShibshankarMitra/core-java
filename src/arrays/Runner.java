@@ -15,6 +15,7 @@ public class Runner {
         //runner.rotateArrayLeft(new int[]{1,2,0,3,0,4,5,0,0}, 3);
         //runner.reArrangePositiveNegative(new int[]{1,-2,7,3,10,4,-5,-3,-8});
         //runner.numberOfSubarraysWithSumLessThanK(new int[]{1, 3, 4, 2}, 7);
+        runner.reverseArrayWithoutAnother();
     }
 
     void kthLargestElement(int[] arr, int k) {
@@ -151,5 +152,19 @@ public class Runner {
             }
             System.out.println(Arrays.toString(tmp));
         }
+    }
+
+    void reverseArrayWithoutAnother(){
+        int arr[] = {1, 2, 3, 4, 5};
+        int left = 0;
+        int right = arr.length-1;
+        while(left<right){
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
