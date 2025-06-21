@@ -9,29 +9,27 @@ public class DecodeString {
         System.out.println(s);
     }
 
-    public static String decodeString(String s) {
-        int n = 0;
-        StringBuilder sb = new StringBuilder();
-        Stack<Integer> integers = new Stack<>();
-        Stack<StringBuilder> strings = new Stack<>();
-
-        for (char c : s.toCharArray()) {
-            if (Character.isDigit(c)) {
-                n=n*10 + (c - '0');
-            } else if (c == '[') {
-                integers.push(n);
-                n = 0;
-                strings.push(sb);
-                sb = new StringBuilder();
-            } else if (c == ']') {
-                int k= integers.pop();
-                StringBuilder temp = sb;
-                sb= strings.pop();
-                while (k-->0) {
-                    sb.append(temp);
-                }
-            } else {
+    public static String decodeString(String str) {
+        Stack<StringBuffer> chars = new Stack<>();
+        Stack<Integer> ints = new Stack<>();
+        StringBuffer sb = new StringBuffer();
+        int num=0;
+        for (char c : str.toCharArray()) {
+            if(Character.isDigit(c)){
+                num= num*10+(c-'0');
+            } else if (Character.isAlphabetic(c)) {
                 sb.append(c);
+            } else if (c=='[') {
+                ints.push(num);
+                chars.push(sb);
+                sb = new StringBuffer();
+                num=0;
+            } else if (c==']') {
+                StringBuffer temp = sb;
+                System.out.println(sb);
+                sb = chars.pop();
+                int k= ints.pop();
+                sb.append(String.valueOf(temp).repeat(k));
             }
         }
         return sb.toString();

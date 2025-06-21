@@ -10,12 +10,13 @@ public class Runner {
         //runner.kthLargestElement(new int[]{3, 2, 1, 5, 6, 4,9}, 2);
         //runner.maximumSumOfkElements(new int[]{3, 2, 1, 5, 6, 4,9}, 2);
         //runner.maxConsecutiveBinary(new int[]{1,0,1,0,0,0,0,1});
-        //runner.moveAllZerosToEnd(new int[]{1,2,0,3,0,4,5,0,0,9});
+        //runner.moveAllZerosToEnd(new int[]{0,1,2,0,3,0,4,5,0,0,9});
         //runner.reverseArrayInGroups(new int[]{1,2,0,3,0,4,5,0,0}, 3);
         //runner.rotateArrayLeft(new int[]{1,2,0,3,0,4,5,0,0}, 3);
+        //runner.rotateArrayLeftUsingAnotherArray(new int[]{1,2,0,3,0,4,5,0,0},3);
         //runner.reArrangePositiveNegative(new int[]{1,-2,7,3,10,4,-5,-3,-8});
         //runner.numberOfSubarraysWithSumLessThanK(new int[]{1, 3, 4, 2}, 7);
-        runner.reverseArrayWithoutAnother();
+        //runner.reverseArrayWithoutAnother();
     }
 
     void kthLargestElement(int[] arr, int k) {
@@ -46,36 +47,43 @@ public class Runner {
     }
 
     void maxConsecutiveBinary(int[] arr) {
-        int count = 1;
-        int running = arr[0];
-        int maxCount = 0;
-        for (int i = 1; i < arr.length; i++) {
-            int current = arr[i];
-            if (running == current) {
+        int left=0;
+        int right=0;
+        int count=1;
+        int maxCount=0;
+        while(right<arr.length-2){
+            if(arr[right]==arr[right+1]){
                 count++;
             }
-            else {
-                running = current;
-                count = 1;
+            else{
+                count=1;
             }
-            if (count > maxCount) {
-                maxCount = count;
-            }
+            maxCount=Math.max(count,maxCount);
+            right++;
         }
         System.out.println(maxCount);
     }
 
     void moveAllZerosToEnd(int[] arr) {
-        int left = 0;
-        while (left < arr.length) {
-            for (int i = left; i < arr.length-1; i++) {
-                if (arr[i] == 0) {
-                    int temp= arr[i+1];
-                    arr[i+1]= arr[i];
-                    arr[i]= temp;
-                }
+        int index=0;
+        for(int i=0;i< arr.length;i++) {
+            if (arr[i] != 0) {
+                arr[index++] = arr[i];
             }
-            left++;
+        }
+        for(int j=index+1;j< arr.length;j++) {
+            arr[j] = 0;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    void reverseArray(int[] arr) {
+        int left=0;
+        int right=arr.length-1;
+        while(left<right){
+            int temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
         }
         System.out.println(Arrays.toString(arr));
     }
@@ -99,6 +107,20 @@ public class Runner {
             arr[arr.length-1] = temp;
         }
         System.out.println(Arrays.toString(arr));
+    }
+
+    void rotateArrayLeftUsingAnotherArray(int[] arr, int k) {
+        int[] arr1 = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if(i<k){
+                arr1[arr.length-k+i]=arr[i];
+            }
+            else{
+                arr1[i-k]=arr[i];
+            }
+        }
+        System.out.println(Arrays.toString(arr1));
+
     }
 
     void reArrangePositiveNegative(int[] arr) {
