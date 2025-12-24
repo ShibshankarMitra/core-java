@@ -1,5 +1,7 @@
 package oops_concepts.comparator;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -18,13 +20,22 @@ public class  Main {
 		Employee e4 = new Employee(1004, "Pronoy", 28000, a4);
 		Employee e5 = new Employee(1005, "Aanal", 28000, a5);
 
-		List<Employee> list = List.of(e1,e2,e3,e4,e5);
+		List<Employee> list = new ArrayList<>();
+        list.add(e1);
+        list.add(e2);
+        list.add(e3);
+        list.add(e4);
+        list.add(e5);
 
         System.out.println("Unsorted List: ");
 		list.forEach(System.out::println);
 
 		System.out.println("Natural sorted List: ");
 		list.stream().sorted().forEach(System.out::println);
+
+        Collections.sort(list, new EmpCompareByName());
+        System.out.println("Custom comparator sorted List: ");
+        list.forEach(System.out::println);
 
 		System.out.println("Custom sorted List based on Name: ");
 		list.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);
