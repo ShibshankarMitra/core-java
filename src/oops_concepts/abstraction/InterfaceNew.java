@@ -12,7 +12,7 @@ public interface InterfaceNew {
     // This is a feature introduced in Java 8 and similar features exist in other languages like C#.
     // They enable interfaces to evolve and add new functionality without breaking compatibility with existing implementations.
 
-    void m1();
+    public abstract void m1();
 
     default Integer m2(){
         return 100;

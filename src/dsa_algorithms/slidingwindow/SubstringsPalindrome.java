@@ -2,7 +2,7 @@ package dsa_algorithms.slidingwindow;
 
 public class SubstringsPalindrome {
 
-    static void main() {
+    public static void main(String[] args) {
         String s= "abcbaba";
         int left=0;
         int count=0;
