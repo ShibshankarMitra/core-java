@@ -14,7 +14,7 @@ public class TryCatchFinally {
 		}
 		finally {
 			x=2;
-			//return x;
+			return x;
 		}
     }
 }
