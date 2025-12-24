@@ -2,7 +2,7 @@ package oops_concepts.inheritance;
 
 public class SealedClass {
 
-    public void main(String[] args){
+    public static void main(String[] args){
 
     }
     sealed class A permits B,C{
