@@ -42,5 +42,8 @@ public class  Main {
 
 		System.out.println("Custom sorted List based on Salary then on the address country: ");
 		list.stream().sorted(Comparator.comparing(Employee::getSalary).thenComparing(e->e.getAddress().getCountry())).forEach(System.out::println);
+
+        //other ways of defining comparators
+        Comparator<Employee> empCompByNameAndSalary= Comparator.comparing(Employee::getName).thenComparing(e-> e.getAddress().getCountry());
 	}
 }

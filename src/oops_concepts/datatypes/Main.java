@@ -23,5 +23,25 @@ public class Main {
         //By default initiated as 0.0
         double sum = f + d;
         System.out.println(sum);
+
+        //for primitives == operator will compare the actual values
+        //and for reference types the == operator will compare te object reference
+        // to compare the Object contents we will use equals() method
+        int i=100;
+        int j=100;
+        System.out.println(i==j);//will print true
+
+        Integer i1=100;
+        Integer i2=100;
+        System.out.println(i1==i2);//will print true
+        System.out.println(i1.equals(i2));//will also print true
+        //even though they are reference types for Integer types -128 to 127 values are cached in jvm memory
+        //hence we get the same reference for different objects
+        //However if we take Integer values beyond this range we will get anomaly in == and equals() comparison
+
+        Integer i3=200;
+        Integer i4=200;
+        System.out.println(i3==i4);//will print true
+        System.out.println(i3.equals(i4));//will also print true
     }
 }
