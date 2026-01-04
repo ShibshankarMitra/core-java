@@ -23,6 +23,12 @@ public record ImmutableRecord(String name, Integer number, List<String> lis) {
     }
 
     public static void main(String[] args) {
-        ImmutableRecord obj1 = new ImmutableRecord("a", 100, List.of("ssm"));
+        List<String> lis= new ArrayList<>();
+        lis.add("Ram");
+        lis.add("Shyam");
+        ImmutableRecord obj1 = new ImmutableRecord("a", 100, lis);
+        obj1.lis.add("new");
+        System.out.println(lis);
+        System.out.println(obj1.lis());
     }
 }

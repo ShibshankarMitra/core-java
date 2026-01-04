@@ -2,11 +2,14 @@ package design_patterns.factory;
 
 public class ComputerFactory {
     public static Computer getComputer(String type, String ram, String cpu, String storage) {
-        if ("Laptop".equalsIgnoreCase(type)) {
-            return new Laptop(ram, cpu, storage);
-        } else if ("Desktop".equalsIgnoreCase(type)) {
-            return new Desktop(ram, cpu, storage);
+        switch (type){
+            case "Desktop" : {
+                return new Desktop(ram, cpu, storage);
+            }
+            case "Laptop" : {
+                return new Laptop(ram, cpu, storage);
+            }
+            default: return null;
         }
-        return null; // or throw an exception
     }
 }
