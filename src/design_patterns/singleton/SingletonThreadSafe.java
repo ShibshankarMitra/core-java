@@ -6,6 +6,8 @@ public class SingletonThreadSafe {
     private SingletonThreadSafe(){
     }
 
+    //double-checked locking
+    //first check is for acquiring the lock, and the second check is for creating the instance
     public static SingletonThreadSafe getInstance(){
         if(instance == null){
             synchronized (SingletonThreadSafe.class){
